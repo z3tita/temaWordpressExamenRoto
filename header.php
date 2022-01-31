@@ -8,14 +8,23 @@
 
   <?php wp_head(); ?>
 
-  <title>Título del blog</title>
+  <title> 
+    <?php 
+     echo get_bloginfo("name");
+    ?>
+  </title>
+  <link rel="stylesheet" src="blog.css">
+  <link rel="stylesheet" src="fonts.css">
 </head>
 
 <body>
   <div class="container">
     <header class="blog-header py-3">
       <div class="row flex-nowrap justify-content-between align-items-center text-center">
-          <a class="blog-header-logo text-dark" href="/">Mi gran sitio</a>
+          <a class="blog-header-logo text-dark" href="/"> 
+            <?php 
+              echo get_bloginfo("name");
+            ?></a>
       </div>
     </header>
     <nav class="navbar navbar-expand-lg navbar-light">
